@@ -1,0 +1,38 @@
+<h2 id="header">Hi! {{chat.senders}}</h2>
+<div ng-controller='chatController as chat'>
+    <div id="div2">
+        <h2>Contacts</h2>
+        <div id="chat-window">
+            <div ng-repeat='i in users'>
+                <button id="b1" ng-click='chat.func(i)'>{{i.name}}</button>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div id="div3" ng-if='flag==1'>
+        <h2>Chats</h2>
+        <div id="chat-window">
+            <div ng-if='length==1'>
+                <div id="output">{{infomsg.message}}</div><br>
+            </div>
+            <div ng-repeat='h in infomsg'>
+                <div id="output">{{h.message}}</div><br>
+            </div>
+        </div>
+
+        <input id='ip1' type="text" ng-model="chat.data" placeholder="Message" />
+        <button type="submit" ng-click='chat.chatUser(chat.data)'>Send</button>
+
+    </div>
+    <div id="div3" ng-if='flag==0'>
+        <h2>Chats</h2>
+        <div id="chat-window">
+            <div ng-repeat='h in msg'>
+                <div id="output">{{h.message}}</div><br>
+            </div>
+        </div>
+        <input id='ip1' type="text" ng-model="chat.data" placeholder="Message" />
+        <button type="submit" ng-click='chat.chatUser(chat.data)'>Send</button>
+
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div id='div1'>
+    <h2>Login</h2>
+    <form ng-submit="login.loginUser(data);">
+        Email<br>
+        <input type="email" ng-model="login.data.email" required><br>
+        Password<br>
+        <input type="password" ng-model="login.data.password" required><br>
+
+        <button type="submit">Login</button>
+    </form>
+    <a id=a2 href="http://localhost:8080/#!/forgotPassword">Forgot Password?</a>
+    <h5>{{login.successMsg}}</h5>
+    <h4>{{login.failureMsg}}</h4>
+</div>

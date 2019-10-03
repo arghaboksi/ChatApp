@@ -1,0 +1,19 @@
+<div id='div1'>
+<h2>Register</h2>
+  <form ng-submit="register.regUser(data);">
+      Name<br>
+      <input type="text" ng-model="register.data.name" required><br>
+      Email<br>
+      <input type="email" ng-model="register.data.email" required><br>
+      Password<br>
+      <input type="password" ng-model="register.data.password1"required><br>
+      Re-enter Password<br>
+      <input type="password" ng-model="register.data.password2"required><br>
+      <button type="submit">Register</button>
+  </form>
+
+    <h5>{{register.successMsg}}</h5>
+  
+  
+    <h4>{{register.failureMsg}}</h4>
+  </div>
