@@ -13,7 +13,7 @@
     "MongoDB",
     "Mongoose"
   ],
-  "author": "SHIRIN",
+  "author": "argha",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
