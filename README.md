@@ -8,3 +8,21 @@ This App provides Chat Service to the registered users. A registered user can ch
 5. Socket.IO to enable realtime bi-directional communication.
 ## Mockups
 1. Homepage
+
+![](Images/Homepage.PNG)
+
+2. Registration Page
+
+![](Images/Register.PNG)
+
+3. Log In Page
+
+![](Images/Login.PNG)
+
+4. Dashboard
+
+![](Images/Dashboard.PNG)
+
+Contacts are users who have already registered. For example, in the attached screenshot Karim Benzema(i.e. logged in user) can choose any individual from the contact list to have a conversation with.
+
+5. Chat Illustration
