@@ -26,6 +26,7 @@ This App provides Chat Service to the registered users. A registered user can ch
 Contacts are users who have already registered. For example, in the attached screenshot Karim Benzema(i.e. logged in user) can choose any individual from the contact list to have a conversation with.
 
 5. Chat Illustration
+
 The following is a chat session between two users Eden Hazard and Karim Benzema, it is realtime bi-directional communication.
 
 ![](Images/ChatSessionOne.PNG)
