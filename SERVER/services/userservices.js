@@ -2,6 +2,7 @@ const user = require('../app/models/usermodel.js');
 const bcrypt = require('bcryptjs');
 const createToken = require('../middleware/token');
 const toSendMail = require('../middleware/mail');
+const { response } = require('express');
 
 exports.registerUser = (body, callback) => {
     var error1 = [];
@@ -30,15 +31,22 @@ exports.registerUser = (body, callback) => {
 
 }
 exports.loginUser = (body, users, callback) => {
+    console.log(body);
+    console.log(users);
     bcrypt.compare(body.password, users[0].password, (err, result) => {
-        if (err)
+        if (err) {
+            //console.log(err);
             callback(err);
+        }
         if (result) {
+            //console.log(response);
             createToken.tokenGenerator(users[0].email, users[0]._id, (err, response) => {
                 if (response) {
+                    //console.log(response);
                     callback(null, response);
                 }
                 if (err) {
+                    //console.log(err);
                     callback(err);
                 }
             })
@@ -136,7 +144,7 @@ exports.forgotPasswordSet = (body, data, callback) => {
                 .then(result => {
                     //console.log(result);
                     success = {
-                        msg: "Password Updated",     
+                        msg: "Password Updated",
                         status: 200
                     }
                     callback(null, success);
@@ -148,7 +156,7 @@ exports.forgotPasswordSet = (body, data, callback) => {
                     }
                     callback(error);
                 })
-            }
+        }
 
     })
 }

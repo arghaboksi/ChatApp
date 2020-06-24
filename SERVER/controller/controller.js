@@ -25,6 +25,8 @@ exports.register = (req, res) => {
     }
 }
 exports.login = (req, res) => {
+    //console.log(req.body.email);
+    //console.log(req.body.password);
     req.checkBody('email').isEmail();
     req.checkBody('password').isLength({ min: 6 });
     req.getValidationResult().then(err => {
@@ -33,6 +35,7 @@ exports.login = (req, res) => {
         else {
             user.find({ email: req.body.email })
                 .then(users => {
+                    //console.log(users);
                     if (users.length < 1) {
                         res.json({ status: 401, msg: 'Auth Failed' });
                     }

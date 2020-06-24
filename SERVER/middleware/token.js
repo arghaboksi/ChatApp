@@ -3,7 +3,7 @@ exports.tokenGenerator = (email, userid, callback) => {
     jwt.sign({
         email: email,
         id: userid
-    }, process.env.PRIVATE_KEY, {
+    }, "Private Key", {
         expiresIn: '6h'
     }, (err, response) => {
         if (err)
@@ -16,7 +16,7 @@ exports.tokenGenerator = (email, userid, callback) => {
 }          
 
 exports.tokenChecker = (token, callback) => {
-    jwt.verify(token, process.env.PRIVATE_KEY, (err, data) => {
+    jwt.verify(token, "Private Key", (err, data) => {
         if (err) {
             callback(err);
         }

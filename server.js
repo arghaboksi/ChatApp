@@ -13,9 +13,9 @@ app.use(express.json());
 app.use(validation());
 app.use(express.static(__dirname + "/CLIENT"));
 
-const dbconfig = require('./config/database.config.js');
+//const dbconfig = require('./config/database.config.js');
 
-mongoose.connect(dbconfig.url, {
+mongoose.connect('mongodb://127.0.0.1:27017/chatApp', { 
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
@@ -25,7 +25,7 @@ mongoose.connect(dbconfig.url, {
     process.exit();
 });
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Origin', '*'); 
     res.header('Access-Control-Allow-Headers', 'X-Requested-With,content-type,Authorization');      //Instead of * request may be Origin,Content-Type etc. 
 
     if (req.method === 'OPTIONS') {

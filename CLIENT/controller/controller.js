@@ -25,8 +25,10 @@ app.controller('registerController', function ($http, $location, $timeout, $wind
 app.controller('loginController', function ($http, $location, $timeout, $window) {
     var app = this;
     this.loginUser = function (data) {
-        console.log(data);
+        console.log(this.data);
+        console.log("HI");
         $http.post('/login', this.data).then(response => {
+            console.log(response);
             if (response.data.status === 200) {
                 sender = response.data.email;
                 app.successMsg = response.data.msg;
