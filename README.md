@@ -1,5 +1,10 @@
 # ChatApp
 This App provides Chat Service to the registered users. A registered user can choose the person with whom he/she wants to have a conversation with. An user also has the ability to reset or change password.
+## Running Locally
+1. Clone this repo
+2. cd ChatApp
+3. npm i
+4. npm run dev
 ## Tech Stack
 1. Express.js as the web framework
 2. MongoDB as the database
@@ -31,3 +36,9 @@ The following is a chat session between two users Eden Hazard and Karim Benzema,
 
 ![](Images/ChatSessionOne.PNG)
 ![](Images/ChatSessionTwo.PNG)
+
+6. Forgot Password
+
+![](Images/ForgotPassword.PNG)
+
+Once the user enters the registered email address, he/she will get a reset password link in the provided email address and subsequently will be able to reset his/her password.
