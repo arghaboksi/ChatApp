@@ -6,13 +6,13 @@ let nodemail = (token,mail) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: "shaina12sinha@gmail.com",
+            user: "put some mail id",
             pass: process.env.PASSWORD
         }
     });
 
     let mailOptions = {
-        from: 'shaina12sinha@gmail.com',
+        from: 'put some mail id',
         to: mail,
         subject: 'password change', 
         text: token.url
